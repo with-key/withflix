@@ -11,11 +11,15 @@
     * BrowserRouter, Switch, Link
 
 ## 2일차
+### 진도
+* ~ #5.3 TV Container
 ### 키워드
 * react-router-dom
-  * withRouter
+  * withRouter -- header location setting (border bottom)
 * api
-  - [ ] now playing
-  - [ ] upcoming
-  - [ ] top rated
-  - [ ] popular
+  * useState, 
+    * async, await
+    * try, catch, finally
+  * useEffect
+    * setState
+  
