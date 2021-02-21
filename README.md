@@ -9,3 +9,13 @@
   * styled-reset
   * react-router-dom
     * BrowserRouter, Switch, Link
+
+## 2일차
+### 키워드
+* react-router-dom
+  * withRouter
+* api
+  - [ ] now playing
+  - [ ] upcoming
+  - [ ] top rated
+  - [ ] popular

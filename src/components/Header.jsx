@@ -1,25 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default () => {
+export default withRouter(({ location: { pathname } }) => {
   return (
     <Header>
       <List>
-        <Item>
+        <Item currnet={pathname === "/"}>
           <SLink to="/">Home</SLink>
         </Item>
-        <Item>
+        <Item currnet={pathname === "/tv"}>
           <SLink to="/tv">TV</SLink>
         </Item>
-        <Item>
-          <SLink to="/seLinkrch">Search</SLink>
+        <Item currnet={pathname === "/search"}>
+          <SLink to="/search">Search</SLink>
         </Item>
       </List>
     </Header>
   );
-};
+});
 
 // styled
 const Header = styled.header`
@@ -41,6 +40,8 @@ const List = styled.ul`
 const Item = styled.li`
   list-style: none;
   width: 60px;
+  border-bottom: 5px solid ${(props) => (props.currnet ? "red" : "transparent")};
+  transition: border-bottom 0.5s ease-in-out;
 `;
 const SLink = styled(Link)`
   display: flex;
