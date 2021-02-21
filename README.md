@@ -22,4 +22,11 @@
     * try, catch, finally
   * useEffect
     * setState
-  
+
+---
+## Rules
+### All Fnctional components and Hook (No Class components)
+### Typescript (JS -> TS /  will convert to typescript soon after complete javascript)
+### Main package
+  * Axios
+  * Styled-components
