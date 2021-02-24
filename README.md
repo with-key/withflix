@@ -25,7 +25,10 @@
 
 ## 3일차
 ### 진도
-* ~ 
+* ~ #5.6 Detail Container part Two (13:21)
+### 키워드
+* Search Container, Detail Container ok
+
 
 ---
 ## Rules
