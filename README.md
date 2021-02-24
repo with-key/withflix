@@ -23,6 +23,10 @@
   * useEffect
     * setState
 
+## 3일차
+### 진도
+* ~ 
+
 ---
 ## Rules
 ### All Fnctional components and Hook (No Class components)
@@ -30,3 +34,4 @@
 ### Main package
   * Axios
   * Styled-components
+  
