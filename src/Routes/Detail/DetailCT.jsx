@@ -42,7 +42,7 @@ const DetailCT = ({ props }) => {
       }
     };
     detailInfo();
-  }, []);
+  }, [props]);
 
   return (
     <DetailPT

@@ -23,6 +23,7 @@ export default withRouter(({ location: { pathname } }) => {
 // styled
 const Header = styled.header`
   color: #fff;
+  background-color: #141414;
   height: 50px;
   display: flex;
   align-items: center;

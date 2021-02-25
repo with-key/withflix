@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+import PropsTypes from "prop-types";
 
 const TVPT = ({ topRated, popular, airingToday, loading, error }) => {
   return (
@@ -10,6 +12,14 @@ const TVPT = ({ topRated, popular, airingToday, loading, error }) => {
       )}
     </div>
   );
+};
+
+TVPT.PropsTypes = {
+  topRated: PropsTypes.array,
+  popular: PropsTypes.array,
+  airingToday: PropsTypes.array,
+  loading: PropsTypes.bool.isRequired,
+  error: PropsTypes.string,
 };
 
 export default TVPT;
