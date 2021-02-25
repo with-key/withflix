@@ -14,6 +14,7 @@ const TVPT = ({ topRated, popular, airingToday, loading, error }) => {
   );
 };
 
+//type 지정
 TVPT.PropsTypes = {
   topRated: PropsTypes.array,
   popular: PropsTypes.array,

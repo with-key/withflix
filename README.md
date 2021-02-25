@@ -29,6 +29,15 @@
 ### 키워드
 * Search Container, Detail Container ok
 
+## 4일차
+### 진도
+* #6.1 HomePresenter and Section Components (10:56)
+### 키워드
+* PropTypes
+* children
+  * children 은 "<><>" 사이에 있는 내용을 Props로 전달한다.
+  
+
 
 ---
 ## Rules
