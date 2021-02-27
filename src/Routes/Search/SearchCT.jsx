@@ -10,10 +10,18 @@ const SearchCT = () => {
   const [error, setError] = useState(null);
 
   // 검색어가 ""가 아니면, function 을 실행함
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (searchTerm !== "") {
-      searchByTerm();
+      searchByTerm(searchTerm);
     }
+  };
+
+  const updateTerm = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setSearchTerm(value);
   };
 
   const searchByTerm = async () => {
@@ -33,7 +41,6 @@ const SearchCT = () => {
       setLoading(false);
     }
   };
-  console.log(movieResults, tvResults, searchTerm, loading, error);
   return (
     <SearchPT
       loading={loading}
@@ -42,6 +49,7 @@ const SearchCT = () => {
       tvResults={tvResults}
       searchTerm={searchTerm}
       handleSubmit={handleSubmit}
+      updateTerm={updateTerm}
     />
   );
 };

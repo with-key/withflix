@@ -35,7 +35,8 @@
 ### 키워드
 * PropTypes
 * children
-  * children 은 "<><>" 사이에 있는 내용을 Props로 전달한다.
+  * children 은 이 컴포넌트 사이에 있는 값을 Props로 가져온다
+    * ex. Section을 만들어서 HomePT에 import 했고, HomePT에서 Section이 쓰여질 때 Section 컴포넌트 안에 있는 값을 children으로 하여 가져왔다.
   
 
 

@@ -4,7 +4,7 @@ const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
   params: {
     api_key: "490831779a168f25c0cd26fd762ae862",
-    language: "en-KR",
+    language: "en-US",
   },
 });
 

@@ -1,65 +1,66 @@
 import React from "react";
 import styled from "styled-components";
 import PropsTypes from "prop-types";
-import { Link } from "react-router-dom";
-import Section from "../../components/Section";
+import Section, { ItemLink } from "../../components/Section";
+import Loader from "../../components/Loader";
 
-const Container = styled.div`
-  padding: 0px 10px;
-  .poster {
-    width: 100%;
-    border-radius: 8px;
-  }
-`;
+const Container = styled.div``;
 
-const ItemLink = styled(Link)`
-  transition: transform 200ms ease-in-out;
-  :hover {
-    transform: scale(1.1);
-    z-index: 100;
-  }
-`;
-
-const HomePT = ({ nowPlaying, upcoming, popular, loading, error }) => {
-  return (
+const HomePT = ({ nowPlaying, upcoming, popular, loading, error }) =>
+  loading ? (
+    <Loader />
+  ) : (
     <Container>
-      <Section title="Now Playing">
-        {loading ? (
-          <div>Loading....</div>
-        ) : (
-          nowPlaying.map((item, key) => {
-            return (
-              <ItemLink key={key} className="item" to={`/movie/${item.id}`}>
-                <div>
-                  <img
-                    className="poster"
-                    alt="poster"
-                    src={`https://www.themoviedb.org/t/p/w440_and_h660_face${item.poster_path}`}
-                  />
-                </div>
-                {item.title}
-              </ItemLink>
-            );
-          })
-        )}
+      <Section title="현재 상영중">
+        {nowPlaying.map((item, key) => {
+          return (
+            <ItemLink key={key} className="item" to={`/movie/${item.id}`}>
+              <div>
+                <img
+                  className="poster"
+                  alt="poster"
+                  src={`https://www.themoviedb.org/t/p/w440_and_h660_face${item.poster_path}`}
+                />
+              </div>
+              {item.title}
+            </ItemLink>
+          );
+        })}
       </Section>
-      <Section title="Popular">
-        {loading ? (
-          <div>Loading....</div>
-        ) : (
-          popular.map((item, key) => <div key={key}>{item.title}</div>)
-        )}
+      <Section title="상영 예정작">
+        {upcoming.map((item, key) => {
+          return (
+            <ItemLink key={key} className="item" to={`/movie/${item.id}`}>
+              <div>
+                <img
+                  className="poster"
+                  alt="poster"
+                  src={`https://www.themoviedb.org/t/p/w440_and_h660_face${item.poster_path}`}
+                />
+              </div>
+              {item.title}
+            </ItemLink>
+          );
+        })}
       </Section>
-      <Section title="Upcoming">
-        {loading ? (
-          <div>Loading....</div>
-        ) : (
-          upcoming.map((item, key) => <div key={key}>{item.title}</div>)
-        )}
-      </Section>
+      <Section title="인기 상영작">
+        {popular.map((item, key) => {
+          return (
+            <ItemLink key={key} className="item" to={`/movie/${item.id}`}>
+              <div>
+                <img
+                  className="poster"
+                  alt="poster"
+                  src={`https://www.themoviedb.org/t/p/w440_and_h660_face${item.poster_path}`}
+                />
+              </div>
+              {item.title}
+            </ItemLink>
+          );
+        })}
+      </Section>{" "}
     </Container>
   );
-};
 
 HomePT.PropsTypes = {
   nowPlaying: PropsTypes.array,
