@@ -21,11 +21,12 @@ const HomeCT = () => {
         const {
           data: { results: popular },
         } = await moviesApi.popular();
+        // throw Error();
         setNowPlaying(nowPlaying);
         setUpcoming(upcoming);
         setPopular(popular);
       } catch {
-        setError("error!");
+        setError("error 발생");
       } finally {
         setLoading(false);
       }

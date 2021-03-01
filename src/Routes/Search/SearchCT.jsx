@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { moviesApi, tvApi } from "../../api";
 import SearchPT from "./SearchPT";
 
@@ -36,7 +36,9 @@ const SearchCT = () => {
       setMovieResults(movieResults);
       setTvResults(showResults);
     } catch {
-      setError("error!");
+      console.log("에러가 발생했습니다.");
+      setError(true);
+      console.log(error);
     } finally {
       setLoading(false);
     }

@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import PropsTypes from "prop-types";
 
+const Container = styled.div`
+  height: calc(100vh - 50px);
+  width: 100%;
+  border: 1px solid red;
+  background: url();
+`;
+
 const DetailPT = ({ result, loading, error, isMovie }) => {
-  return (
-    <>
-      <div>{loading ? "loading..." : isMovie ? "Movie" : "Tv Show"}</div>
-      <div>{loading ? "loading..." : isMovie ? result.title : result.name}</div>
-    </>
-  );
+  return <Container>DetailPT</Container>;
 };
 
 DetailPT.PropsTypes = {

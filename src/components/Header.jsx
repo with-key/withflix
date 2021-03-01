@@ -7,13 +7,13 @@ export default withRouter(({ location: { pathname } }) => {
     <Header>
       <List>
         <Item currnet={pathname === "/"}>
-          <SLink to="/">Home</SLink>
+          <SLink to="/">영화</SLink>
         </Item>
         <Item currnet={pathname === "/tv"}>
-          <SLink to="/tv">TV</SLink>
+          <SLink to="/tv">Tv 프로그램</SLink>
         </Item>
         <Item currnet={pathname === "/search"}>
-          <SLink to="/search">Search</SLink>
+          <SLink to="/search">검색</SLink>
         </Item>
       </List>
     </Header>
@@ -40,10 +40,10 @@ const List = styled.ul`
 `;
 const Item = styled.li`
   list-style: none;
-  width: 60px;
+  width: 100px;
   border-bottom: 5px solid ${(props) => (props.currnet ? "red" : "transparent")};
   font-weight: ${(props) => (props.currnet ? "700" : "400")};
-  transition: border-bottom 0.5s ease-in-out;
+  transition: border-bottom 0.5s ease-in;
 `;
 const SLink = styled(Link)`
   font-size: 1.5rem;

@@ -18,7 +18,6 @@ const GlobalStyles = createGlobalStyle`
         
         background-color:rgba(20, 20, 20, 1);
         color: #fff;
-        height: 200vh;
         padding-top: 50px;
     }
 `;

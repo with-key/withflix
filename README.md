@@ -31,12 +31,18 @@
 
 ## 4일차
 ### 진도
-* #6.1 HomePresenter and Section Components (10:56)
+* ~ #6.1 HomePresenter and Section Components (10:56)
 ### 키워드
 * PropTypes
 * children
   * children 은 이 컴포넌트 사이에 있는 값을 Props로 가져온다
     * ex. Section을 만들어서 HomePT에 import 했고, HomePT에서 Section이 쓰여질 때 Section 컴포넌트 안에 있는 값을 children으로 하여 가져왔다.
+
+## 5일차
+### 진도
+* ~ #6.3 SearchPresenter Component (12:32)
+### 키워드
+* Loader 넣기 (api 가져오는 동안 화면에 표시할 컴포넌트 생성 및 적용)
   
 
 
