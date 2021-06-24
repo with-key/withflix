@@ -22,7 +22,7 @@ const HomePT = ({ nowPlaying, upcoming, popular, loading, error }) => {
                   imgUrl={item.poster_path}
                   title={item.title}
                   rating={item.vote_average}
-                  year={item.release_date.substring(0, 4)}
+                  // year={item.release_date.substring(0, 4)}
                   isMovie={true}
                 />
               );
@@ -37,7 +37,7 @@ const HomePT = ({ nowPlaying, upcoming, popular, loading, error }) => {
                   imgUrl={item.poster_path}
                   title={item.title}
                   rating={item.vote_average}
-                  year={item.release_date.substring(0, 4)}
+                  // year={item.release_date.substring(0, 4)}
                   isMovie={true}
                 />
               );
@@ -52,7 +52,7 @@ const HomePT = ({ nowPlaying, upcoming, popular, loading, error }) => {
                   imgUrl={item.poster_path}
                   title={item.title}
                   rating={item.vote_average}
-                  year={item.release_date.substring(0, 4)}
+                  // year={item.release_date.substring(0, 4)}
                   isMovie={true}
                 />
               );
